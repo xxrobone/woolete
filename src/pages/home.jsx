@@ -87,8 +87,8 @@ const Home = () => {
                 animate={{ x: 0, opacity: 1 }}
                 transition={{ duration: 0.4, delay: 0.2 }}
               >
-                <span>28.538336</span>
-                <span>-81.379234</span>
+                <span>59.334591</span>
+                <span>18.063240</span>
               </motion.div>
             </motion.div>
           </div>

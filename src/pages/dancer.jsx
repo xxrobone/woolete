@@ -86,8 +86,8 @@ const Dancer = () => {
               className='details'
             >
               <div className='location'>
-                <span>28.538336</span>
-                <span>-81.379234</span>
+              <span>59.334591</span>
+                <span>18.063240</span>
               </div>
               <div className='mua'>Email: @Woolete</div>
             </motion.div>
