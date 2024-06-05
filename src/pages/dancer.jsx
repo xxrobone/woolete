@@ -165,22 +165,22 @@ const Dancer = () => {
         <div className='container'>
           <div className='row'>
             <h2 className='title'>
-              The insiration behind the artwork & <br /> what it means.
+              Through dance, I speak my truth <br /> & connect with my roots.
             </h2>
             <p>
-              Contrary to popular belief, Lorem Ipsum is not simply random text.
-              It has roots in a piece of classical Latin literature from 45 BC,
-              making it over 2000 years old. Richard McClintock, a Latin
-              professor at Hampden-Sydney College in Virginia, looked up one of
-              the more obscure Latin words, consectetur, from a Lorem Ipsum
-              passage, and going through the cites of the word in classical
-              literature, discovered the undoubtable source. Lorem Ipsum comes
-              from sections 1.10.32 and 1.10.33 of &ldquo;de Finibus Bonorum et
-              Malorum&ldquo;(The Extremes of Good and Evil) by Cicero, written
-              in 45 BC. This book is a treatise on the theory of ethics, very
-              popular during the Renaissance. The first line of Lorem Ipsum,
-              &ldquo;Lorem ipsum dolor sit amet..&ldquo;, comes from a line in
-              section 1.10.32.
+              Woolete is a versatile and dynamic dancer with a unique
+              expression. My focus is on Afro dance, dancehall, and hip hop.
+              With multiple training courses and over 10 years of experience,
+              I&apos;ve accomplished a lot. I&apos;ve worked with several
+              artists, such as Mr Eazi, Antwan, Jasmin Kara, and Panetoz, and
+              have performed on stages like Dramaten and Stadsteatern, both as a
+              dancer and actor/extra. For me, dance is a journey and the
+              ultimate exchange that transcends words. Dance is freedom.
+              <br />
+              <br />
+              Through dance, I speak my truth, staying grounded and humble. Each
+              movement reflects my journey, connecting me with my roots and
+              lighting the path to my dreams.
             </p>
           </div>
         </div>
