@@ -1,0 +1,29 @@
+.home-loader-wrapper {
+    display: block;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0;
+    bottom: 0;
+    background: #242424;
+    z-index: 99;
+    color: #fff;
+    overflow: hidden;
+    z-index: 100;
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .home-loader-text {
+      position: absolute;
+      width: 50vw;
+      font-size: clamp(10vw, 10vw, 20vw);
+      font-weight: 800;
+      text-transform: capitalize;  
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+  
