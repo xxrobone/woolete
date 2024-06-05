@@ -1,12 +1,13 @@
 import { useEffect, useState } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
-// Components
-import ScrollForMore from '../components/scrollForMore';
-import IMG from '../assets/images/becca.png';
+
+import IMG from '../assets/images/bex.jpeg';
+
+const transition = { duration: 1.4, ease: [0.6, 0.01, -0.05, 0.9] };
 
 const firstName = {
   initial: {
-    y: 200, // Initial position off-screen
+    y: 200,
     opacity: 0,
   },
   animate: {
@@ -22,7 +23,7 @@ const firstName = {
 
 const lastName = {
   initial: {
-    y: 200, // Initial position off-screen
+    y: 200,
     opacity: 0,
   },
   animate: {
@@ -38,7 +39,7 @@ const lastName = {
 
 const letter = {
   initial: {
-    y: 200, // Initial position off-screen
+    y: 200,
     opacity: 0,
   },
   animate: {
@@ -48,7 +49,7 @@ const letter = {
   },
 };
 
-const Model = () => {
+const Dancer = () => {
   const { scrollYProgress } = useScroll();
   const scale = useTransform(scrollYProgress, [0, 1], [1, 1.15]);
 
@@ -71,7 +72,7 @@ const Model = () => {
   }, [canScroll]);
 
   return (
-    <motion.div className='single' initial='initial' animate='animate'>
+    <motion.div className='single'>
       <div className='container fluid'>
         <div className='row center top-row'>
           <div className='top'>
@@ -80,15 +81,15 @@ const Model = () => {
               animate={{
                 opacity: 1,
                 y: 0,
-                transition: { delay: 1.2 },
               }}
+              transition={{ delay: 1.2 }}
               className='details'
             >
               <div className='location'>
                 <span>28.538336</span>
                 <span>-81.379234</span>
               </div>
-              <div className='mua'>MUA: @mylifeascrystall</div>
+              <div className='mua'>Email: @Woolete</div>
             </motion.div>
 
             <motion.div className='model'>
@@ -127,22 +128,22 @@ const Model = () => {
             <motion.div className='image-container-single'>
               <motion.div
                 initial={{
-                  y: 0,
-                  width: 650,
-                  height: 520,
+                  y: '-30%',
+                  width: 524,
+                  height: 650,
                 }}
                 animate={{
-                  y: '-50vh',
+                  y: 0,
                   width: '100%',
-                  height: window.innerWidth > 980 ? 800 : 800,
-                  transition: { delay: 0.2 },
+                  height: window.innerWidth > 1440 ? 800 : 1000,
+                  transition: { delay: 0.2, ...transition },
                 }}
                 className='thumbnail-single'
               >
                 <motion.div
                   className='frame-single'
                   whileHover='hover'
-                  transition={{ duration: 0.4 }}
+                  transition={transition}
                 >
                   <motion.img
                     src={IMG}
@@ -150,15 +151,14 @@ const Model = () => {
                     style={{ scale: scale }}
                     initial={{ scale: 1.0 }}
                     animate={{
-                      transition: { delay: 0.2 },
-                      y: window.innerWidth > 980 ? -0 : 0,
+                      transition: { delay: 0.2, ease: 'easeInOut' },
+                      y: window.innerWidth > 1440 ? -0 : -0,
                     }}
                   />
                 </motion.div>
               </motion.div>
             </motion.div>
           </div>
-          <ScrollForMore />
         </div>
       </div>
       <div className='detailed-information'>
@@ -189,4 +189,4 @@ const Model = () => {
   );
 };
 
-export default Model;
+export default Dancer;

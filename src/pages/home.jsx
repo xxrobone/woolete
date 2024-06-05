@@ -1,63 +1,12 @@
-import * as React from 'react';
 import { Link } from 'react-router-dom';
-import { AnimatePresence, motion } from 'framer-motion';
-import IMG from '../assets/images/bexface.png';
+import { motion } from 'framer-motion';
+import IMG from '../assets/images/bex.jpeg';
 /*
 import ImageReveal from "../components/image-reveal/ImageReveal"; */
 
-const firstName = {
-  initial: {
-    y: 200, // Initial position off-screen
-    opacity: 0,
-  },
-  animate: {
-    y: 0,
-    opacity: 1,
-    transition: {
-      delay: 0.4,
-      staggerChildren: 0.1,
-      staggerDirection: 1,
-    },
-  },
-};
 
-const lastName = {
-  initial: {
-    y: 200, // Initial position off-screen
-    opacity: 0,
-  },
-  animate: {
-    y: 0,
-    opacity: 1,
-    transition: {
-      delay: 0.4,
-      staggerChildren: 0.1,
-      staggerDirection: -1,
-    },
-  },
-};
-
-const letter = {
-  initial: {
-    y: 200, // Initial position off-screen
-    opacity: 0,
-  },
-  animate: {
-    y: 0,
-    opacity: 1,
-    transition: { duration: 1 },
-  },
-};
 
 const Home = () => {
-  const [imageLoaded, setImageLoaded] = React.useState(false);
-
-  const handleImageLoaded = () => {
-    setTimeout(() => {
-      setImageLoaded(true); // Set imageLoaded to true after 2 seconds
-    }, 2000);
-  };
-
   return (
     <motion.main
       initial={{ opacity: 0 }}
@@ -66,43 +15,26 @@ const Home = () => {
     >
       <div className='container'>
         <div className='row center'>
-          {/* <motion.div className='model'>
-            <motion.span className='first' variants={firstName} initial="initial" animate='animate'>
-              <motion.span variants={letter}>W</motion.span>
-              <motion.span variants={letter}>O</motion.span>
-              <motion.span variants={letter}>O</motion.span>
-              <motion.span variants={letter}>L</motion.span>
-              <motion.span variants={letter}>E</motion.span>
-              <motion.span variants={letter}>T</motion.span>
-              <motion.span variants={letter}>E</motion.span>
-            </motion.span>
-            <motion.span className='last' variants={lastName} initial="initial" animate='animate'>
-              <motion.span variants={letter}>R</motion.span>
-              <motion.span variants={letter}>E</motion.span>
-              <motion.span variants={letter}>B</motion.span>
-              <motion.span variants={letter}>K</motion.span>
-              <motion.span variants={letter}>H</motion.span>
-              <motion.span variants={letter}>A</motion.span>
-            </motion.span>
-          </motion.div> */}
+         
           <div className='image-container'>
             <p>Click me!</p>
             <div
               className='thumbnail'
               style={{
-                width: 780,
-                height: 380,
+                width: 524,
+                height: 650,
                 position: 'relative',
                 overflow: 'hidden',
               }}
             >
               <motion.div
                 className='frame'
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 0.6 }}
+                initial={{ opacity: 0, height: 0 }}
+                animate={{ opacity: 1, height: '100%' }}
+                transition={{ duration: 1}}
+                exit={{opacity: 0}}
               >
-                <Link to={`/model/woolete`}>
+                <Link to={`/dancer/woolete`}>
                   <img
                     src={IMG}
                     alt='Placeholder'
@@ -113,6 +45,7 @@ const Home = () => {
                       width: '100%',
                       height: '100%',
                       objectFit: 'cover',
+                      objectPosition: 'top center',
                       opacity: 0,
                       transition: 'opacity 0.5s',
                     }}
@@ -127,11 +60,10 @@ const Home = () => {
                       width: '100%',
                       height: '60%',
                       objectFit: 'cover',
-                      objectPosition: 'center 40%',
+                      objectPosition: 'center 10%',
                       opacity: 1,
                       transition: 'opacity 0.5s',
                     }}
-                    onLoad={handleImageLoaded}
                   />
                 </Link>
               </motion.div>
