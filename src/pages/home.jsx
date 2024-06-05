@@ -21,7 +21,7 @@ const Home = () => {
             <div
               className='thumbnail'
               style={{
-                width: 524,
+                width: window.innerWidth > 524 ? 524 : '100svw' ,
                 height: 650,
                 position: 'relative',
                 overflow: 'hidden',
